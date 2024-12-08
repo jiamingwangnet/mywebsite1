@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLRSGZN93F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XLRSGZN93F');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <title>Pictures and shi</title>
+
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body style="height: 100vh; overflow-y: hidden;" class="body-gallery">
+    <h1 style="margin: 0;">
+        <img alt="Pictures" src="/resources/pictures_title.gif" style="margin-left: auto; margin-right: auto; display: block;"/> 
+    </h1>
+
+    <div id="enter" style="background-color: rgba(0, 0, 0, 0.936); position: fixed; top:0;left: 0; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 20;">
+       <div>
+        <button class="unstyle-btn" onclick="(e=>{document.querySelector('#enter').style.display='none';document.querySelector('#audio_0').play();})()" style="display: block; height:fit-content;">
+            <h1 style="color: white; font-size: 100px; font-family: '', Times, serif; margin:0;"><img src="resources/Enter.gif" alt="enter" style="display: block;"></h1>
+        </button>
+        <p style="background-color: red; text-align: center;"><b>please view on desktop 请用电脑</b></p>
+
+        <img src="resources/sound_on.gif" alt="sound on" width="80" style="display: block; margin-left: auto; margin-right: auto;">
+        <p style="background-color: red; text-align: center;"><b>SOUND ON!!!</b></p>
+       </div>
+    </div>
+
+    <div id="page_1">
+        <div class="image-block" style="top: 2vh; left: 3vw;">
+            <img src="resources/gallery/station.jpg" alt="station" width="200">
+            <p>train station</p>
+        </div>
+    
+       
+    
+       
+    
+        <div class="image-block" style="top: 30vh; left: 6vw;">
+            <img src="resources/gallery/creepy.jpg" alt="creepy" width="190">
+            <p>creepy place</p>
+        </div>
+    
+        <div class="image-block" style="top: 60vh; left: 14vw;">
+            <img src="resources/gallery/racks.jpg" alt="racks rhonda" width="170">
+            <p>i got racks now rhonda 💔</p>
+        </div>
+    
+        <div class="image-block" style="top: 50vh; left: 40vw;">
+            <img src="resources/gallery/court.jpg" alt="basketball court" width="230">
+            <p>basketball court</p>
+        </div>
+    
+        
+    
+        
+    
+        
+    
+       
+    
+        
+    </div>
+
+    <div id="page_2" style="display: none;">
+        <div class="image-block" style="top: 10vh; left: 5vw;">
+            <img src="resources/gallery/swing.jpg" alt="swing" width="260">
+            <p>swing</p>
+        </div>
+
+        <div class="image-block" style="top: 30vh; left: 30vw;">
+            <img src="resources/gallery/trees.jpg" alt="trees" width="240">
+            <p>trees and bushes and plants 植物</p>
+        </div>
+
+        <div class="image-block" style="top: 40vh; right: 10vw;">
+            <img src="resources/gallery/kidlover.png" alt="kid lover" width="100">
+            <p>kid lover 坏蛋</p>
+        </div>
+
+        <div class="image-block" style="top: 50vh; left: 60vw;">
+            <img src="resources/gallery/bridge.jpg" alt="bridge" width="280">
+            <p>cool bridge thing</p>
+        </div>
+
+        <div class="image-block" style="top: 45vh; left: 7vw;">
+            <img src="resources/gallery/street.jpg" alt="street" width="300">
+            <p>street in the evening 好看</p>
+        </div>
+
+        <div class="image-block" style="top: 20vh; right: 30vw;">
+            <img src="resources/gallery/road.jpg" alt="road" width="310">
+            <p>dark road with a car</p>
+        </div>
+
+       
+
+        
+    </div>
+
+    <div id="page_3" style="display: none;">
+        <div class="image-block" style="top: 40vh; left: 10vw;">
+            <img src="resources/gallery/beach.jpg" alt="beach" width="340">
+            <p>the beach</p>
+        </div>
+    </div>
+
+    <a style="position: fixed; bottom: 30px; left: 20px;" href="/">< home 回家</a>
+
+    <button style="position: fixed; bottom: 30px; right:90px; padding: 10px;" onclick="prevPage()">prev 上</button>
+    <button style="position: fixed; bottom: 30px; right:20px; padding: 10px;" onclick="nextPage()">next 下</button>
+
+    <div class="audioplayer">
+        <button onclick="playpause(this)" id="playpause" style="position: relative; bottom: 2px; padding-bottom: 3px; height:25px">⏸︎</button>
+
+        <div class="marquee" style="display: inline-block; width: 200px;margin:0; padding:0; overflow: hidden;">
+            <p id="data" style="margin:0; padding:0; overflow: hidden; width:1000px;"></p>
+        </div>
+
+        <input type="range" min="0" max="100" value="0" id="progress" style="margin:0; width:40%;" onclick="userSetProgress(this)">
+
+        <div style="display: inline-block; width: fit-content;margin:0; padding:0; overflow: hidden;">
+            <p id="listprog" style="margin:0; padding:0;"></p>
+        </div>
+    </div>
+
+    <audio class="audio" id="audio_0" data-name="Center" data-artists="Asian Glow, Weatherday" onended="tryPlayNext()">
+        <source src="resources/audio/center_.mp3" type="audio/mp3">
+    </audio>
+
+    <audio class="audio" id="audio_1" data-name="오후 세 시 " data-artists="꿈에 카메라를 가져올걸" onended="tryPlayNext()">
+        <source src="resources/audio/3_in_the_afternoon.mp3" type="audio/mp3">
+    </audio>
+
+    <audio class="audio" id="audio_2" data-name="Nons " data-artists="Vivienne Eastwood" onended="tryPlayNext()">
+        <source src="resources/audio/nons.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="audioplayer.js"></script>
+
+    <script>
+        let curpage = 1;
+        const maxPage = 3;
+
+        function nextPage()
+        {
+            if(curpage === maxPage) return;
+           
+            document.querySelector("#page_"+(curpage)).style.display = "none";
+            document.querySelector("#page_"+(++curpage)).style.display = "block";
+        }
+
+        function prevPage()
+        {
+            if(curpage === 1) return;
+           
+            document.querySelector("#page_"+(curpage)).style.display = "none";
+            document.querySelector("#page_"+(--curpage)).style.display = "block";
+        }
+    </script>
+</body>
+</html>
