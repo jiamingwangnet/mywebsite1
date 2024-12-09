@@ -74,6 +74,8 @@ async function loadMessages()
     const comments = document.querySelector("#comments");
     const messages = await queryMessages();
 
+    comments.replaceChildren();
+
     for(const key in messages)
     {
         const elem = new MessageElem(messages[key].name, messages[key].message, parseInt(key));
