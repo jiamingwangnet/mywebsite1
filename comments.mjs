@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebas
 import { getDatabase, set, ref, query, orderByKey, get } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBcES2xLXS_ncRGQktBDlr7i8S_AB_b-Vc",
+    apiKey: "AIzaSyBcES2xLXS_ncRGQktBDlr7i8S_AB_b-Vc", // just take it fuck you bitch 
     authDomain: "mywebsite1-b6033.firebaseapp.com",
     databaseURL: "https://mywebsite1-b6033-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "mywebsite1-b6033",
