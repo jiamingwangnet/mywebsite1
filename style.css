@@ -1,7 +1,41 @@
+@font-face {
+    font-family: punk_kid;
+    src: url(resources/fonts/punk_kid.ttf);
+    font-weight: bold;
+}
+
+a {
+    font-family: punk_kid;
+    color:rgb(174, 0, 0);
+}
+
+a:visited {
+    color:rgb(152, 0, 0);
+}
+
+a:hover {
+    color:rgb(118, 0, 0);
+}
+
+nav {
+    background-image: linear-gradient(#000000d0, #000000d0), url(/resources/iphone2.jpg);
+    background-size: 200% 100%;
+    background-position: 55% 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: url(/resources/coin_small.gif) inside;
+}
+
 body {
-    background: linear-gradient(#ffffffe7, #ffffff9f, #ffffffbe, #ffffffc0, #000), url(/resources/iphonebg.jpg);
+    background: linear-gradient(#0e0e0ea8, #0e0e0ea8, #0e0e0ea8, #0e0e0ea8, #000), url(/resources/iphonebg.jpg);
     background-repeat: repeat;
     font-family: Arial, sans-serif;
+    color:white;
 }
 
 .body-gallery {
@@ -10,10 +44,6 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     background-size: 50%;
-}
-
-p, a, ul, li, span {
-    font-family: serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
