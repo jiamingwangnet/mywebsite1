@@ -121,6 +121,7 @@ button {
 .image-block p {
     text-align: center;
     margin-top: 8px;
+    margin-bottom: 2px;
     text-shadow: 4px 4px 9px rgba(0,0,0,1);
 }
 
@@ -158,4 +159,9 @@ button {
     height: 25px;
     background-image: linear-gradient(rgb(213, 213, 213), rgb(143, 143, 143));
     padding-left: 40px;
+}
+
+.image-date {
+    font-size: 8px;
+    margin-top: 1px;
 }

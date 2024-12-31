@@ -17,6 +17,8 @@
 
     <link type="text/css" rel="stylesheet" href="style.css"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="lib/exif.js"></script>
 </head>
 <body style="height: 100vh; overflow-y: hidden;" class="body-gallery">
     <h1 style="margin: 0;">
@@ -35,10 +37,11 @@
        </div>
     </div>
 
-    <div id="page_1">
+    <div id="page_1" style="display: none;" class="page">
         <div class="image-block" style="top: 2vh; left: 3vw;">
             <img src="resources/gallery/station.jpg" alt="station" width="200">
             <p>train station</p>
+            <p class="image-date"></p>
         </div>
     
         <div class="image-block" style="top: 22vh; left: 50vw;">
@@ -54,16 +57,19 @@
         <div class="image-block" style="top: 30vh; left: 6vw;">
             <img src="resources/gallery/creepy.jpg" alt="creepy" width="190">
             <p>creepy place</p>
+            <p class="image-date"></p>
         </div>
     
         <div class="image-block" style="top: 60vh; left: 14vw;">
             <img src="resources/gallery/racks.jpg" alt="racks rhonda" width="170">
             <p>i got racks now rhonda 💔</p>
+            <p class="image-date"></p>
         </div>
     
         <div class="image-block" style="top: 50vh; left: 40vw;">
             <img src="resources/gallery/court.jpg" alt="basketball court" width="230">
             <p>basketball court</p>
+            <p class="image-date"></p>
         </div>
     
         <div class="image-block" style="top: 10vh; right: 10vw;">
@@ -92,15 +98,17 @@
         </div>
     </div>
 
-    <div id="page_2" style="display: none;">
+    <div id="page_2" style="display: none;" class="page">
         <div class="image-block" style="top: 10vh; left: 5vw;">
             <img src="resources/gallery/swing.jpg" alt="swing" width="260">
             <p>swing</p>
+            <p class="image-date"></p>
         </div>
 
         <div class="image-block" style="top: 30vh; left: 30vw;">
             <img src="resources/gallery/trees.jpg" alt="trees" width="240">
             <p>trees and bushes and plants 植物</p>
+            <p class="image-date"></p>
         </div>
 
         <div class="image-block" style="top: 40vh; right: 10vw;">
@@ -111,16 +119,19 @@
         <div class="image-block" style="top: 50vh; left: 60vw;">
             <img src="resources/gallery/bridge.jpg" alt="bridge" width="280">
             <p>cool bridge thing</p>
+            <p class="image-date"></p>
         </div>
 
         <div class="image-block" style="top: 45vh; left: 7vw;">
             <img src="resources/gallery/street.jpg" alt="street" width="300">
             <p>street in the evening 好看</p>
+            <p class="image-date"></p>
         </div>
 
         <div class="image-block" style="top: 20vh; right: 30vw;">
             <img src="resources/gallery/road.jpg" alt="road" width="310">
             <p>dark road with a car</p>
+            <p class="image-date"></p>
         </div>
 
         <div class="image-block" style="top: 65vh; left: 30vw;">
@@ -132,24 +143,70 @@
             <img src="resources/gallery/sexyegyptian.png" alt="egyptian" width="140">
             <p>sexy egyptian man</p>
         </div>
+
+        <div class="image-block" style="bottom: 5vh; left: 44vw;">
+            <img src="resources/gallery/weird_man.jpg" alt="weird guy" width="200">
+            <p>weird guy begging</p>
+            <p class="image-date"></p>
+        </div>
     </div>
 
-    <div id="page_3" style="display: none;">
+    <div id="page_3" style="display: none;" class="page">
         <div class="image-block" style="top: 43vh; left: 10vw;">
             <img src="resources/gallery/beach.jpg" alt="beach" width="340">
             <p>the beach</p>
+            <p class="image-date"></p>
         </div>
 
-        <div class="image-block" style="top: 10vh; left: 20vw;">
+        <div class="image-block" style="top: 8vh; left: 15vw;">
             <img src="resources/gallery/chair.jpg" alt="chair" width="320">
             <p>scary chair woooo</p>
+            <p class="image-date"></p>
+        </div>
+
+        <div class="image-block" style="top: 5vh; right: 10vw;">
+            <img src="resources/gallery/forest.jpg" alt="forest" width="320">
+            <p>dark magical forest</p>
+            <p class="image-date"></p>
+        </div>
+
+        <div class="image-block" style="bottom: 7vh; right: 5vw;">
+            <img src="resources/gallery/graffiti_wall.jpg" alt="graffiti wall" width="280">
+            <p>graffiti wall</p>
+            <p class="image-date"></p>
+        </div>
+
+        <div class="image-block" style="top:30vh; left: 45vw;">
+            <img src="resources/gallery/scary_grass.jpg" alt="scary grass" width="250">
+            <p>scary dark magical grass</p>
+            <p class="image-date"></p>
+        </div>
+
+        <div class="image-block" style="bottom:3vh; left: 50vw;">
+            <img src="resources/gallery/night_sky.jpg" alt="night sky" width="270">
+            <p>night sky in a forest</p>
+            <p class="image-date"></p>
+        </div>
+    </div>
+
+    <div id="page_4" style="display: none;" class="page">
+        <div class="image-block" style="top: 53vh; left: 7vw;">
+            <img src="resources/gallery/cat.jpg" alt="my cat" width="200">
+            <p>my cat</p>
+            <p class="image-date"></p>
+        </div>
+
+        <div class="image-block" style="top: 10vh; left: 10vw;">
+            <img src="resources/gallery/rocks.jpg" alt="rocks" width="300">
+            <p>australian rocks</p>
+            <p class="image-date"></p>
         </div>
     </div>
 
     <a style="position: fixed; bottom: 30px; left: 20px;" href="/">< home 回家</a>
 
-    <button style="position: fixed; bottom: 30px; right:90px; padding: 10px;" onclick="prevPage()">prev 上</button>
-    <button style="position: fixed; bottom: 30px; right:20px; padding: 10px;" onclick="nextPage()">next 下</button>
+    <button style="position: fixed; bottom: 30px; right:90px; padding: 10px;" onclick="prevPage()" id="prevBtn">prev 上</button>
+    <button style="position: fixed; bottom: 30px; right:20px; padding: 10px;" onclick="nextPage()" id="nextBtn">next 下</button>
 
     <div class="audioplayer">
         <button onclick="playpause(this)" id="playpause" style="position: relative; bottom: 2px; padding-bottom: 3px; height:25px">⏸︎</button>
@@ -165,39 +222,106 @@
         </div>
     </div>
 
-    <audio class="audio" id="audio_0" data-name="Center" data-artists="Asian Glow, Weatherday" onended="tryPlayNext()">
+    <audio class="audio" id="audio_0" data-name="I Think..." data-artists="Bladee" onended="tryPlayNext()">
+        <source src="resources/audio/i_think.mp3" type="audio/mp3">
+    </audio>
+
+    <audio class="audio" id="audio_1" data-name="Center" data-artists="Asian Glow, Weatherday" onended="tryPlayNext()">
         <source src="resources/audio/center_.mp3" type="audio/mp3">
     </audio>
 
-    <audio class="audio" id="audio_1" data-name="오후 세 시 " data-artists="꿈에 카메라를 가져올걸" onended="tryPlayNext()">
+    <audio class="audio" id="audio_2" data-name="오후 세 시 " data-artists="꿈에 카메라를 가져올걸" onended="tryPlayNext()">
         <source src="resources/audio/3_in_the_afternoon.mp3" type="audio/mp3">
     </audio>
 
-    <audio class="audio" id="audio_2" data-name="Nons " data-artists="Vivienne Eastwood" onended="tryPlayNext()">
+    <audio class="audio" id="audio_3" data-name="Nons" data-artists="Vivienne Eastwood" onended="tryPlayNext()">
         <source src="resources/audio/nons.mp3" type="audio/mp3">
     </audio>
 
     <script src="audioplayer.js"></script>
 
     <script>
-        let curpage = 1;
-        const maxPage = 3;
+        const maxPage = document.querySelectorAll(".page").length;
+        let curpage = maxPage;
+        
+        document.querySelector("#page_"+(curpage)).style.display = "block";
+        document.querySelector("#prevBtn").style.display = "none";
 
         function nextPage()
         {
-            if(curpage === maxPage) return;
-           
+            if(curpage === 1) 
+                return;
+            
             document.querySelector("#page_"+(curpage)).style.display = "none";
-            document.querySelector("#page_"+(++curpage)).style.display = "block";
+            document.querySelector("#page_"+(--curpage)).style.display = "block";
+
+            if(curpage === 1) 
+            {
+                document.querySelector("#nextBtn").style.display = "none";
+            }
+            else
+            {
+                document.querySelector("#prevBtn").style.display = "inline-block";
+            }
         }
 
         function prevPage()
         {
-            if(curpage === 1) return;
-           
+            if(curpage === maxPage) 
+                return;
+            
             document.querySelector("#page_"+(curpage)).style.display = "none";
-            document.querySelector("#page_"+(--curpage)).style.display = "block";
+            document.querySelector("#page_"+(++curpage)).style.display = "block";
+
+            if(curpage === maxPage) 
+            {
+                document.querySelector("#prevBtn").style.display = "none";
+            }
+            else
+            {
+                document.querySelector("#nextBtn").style.display = "inline-block";
+            }
         }
+
+        
+
+        async function getDates()
+        {
+            for(const imageBlock of document.querySelectorAll(".image-block"))
+            {
+                const img = imageBlock.querySelector("img");
+
+                const setDate = () => {
+                    EXIF.getData(img, function() {
+                        const dateElem = imageBlock.querySelector(".image-date");
+                        if(dateElem === null) return;
+
+                        const date = EXIF.getTag(this, "DateTime");
+
+                        if(date === undefined) {dateElem.innerText = "Unknown"; return;};
+                        
+                        const modified = new Date(date.substring(0, date.indexOf(' ')).replaceAll(':', '/'));
+
+                        const text = modified < new Date("01/01/2023") ? "Unknown" : `${modified.getDate()}/${modified.getMonth()+1}/${modified.getFullYear()}`;
+
+                        dateElem.innerText = text;
+                    });
+                };
+
+                if(img.complete)
+                {
+                    setDate();
+                }
+                else
+                {
+                    img.onload = () => {
+                        setDate();
+                    };
+                }
+            }
+        }
+
+        getDates();
     </script>
 </body>
 </html>
