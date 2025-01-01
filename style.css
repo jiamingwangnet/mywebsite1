@@ -4,21 +4,34 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: ordner;
+    src: url(resources/fonts/Ordnerin.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: segoe_ui;
+    src: url(resources/fonts/segoeui.ttf);
+    font-weight: normal;
+}
+
 a {
     font-family: punk_kid;
-    color:rgb(174, 0, 0);
+    color: rgb(174, 0, 0);
 }
 
 a:visited {
-    color:rgb(152, 0, 0);
+    color: rgb(152, 0, 0);
 }
 
 a:hover {
-    color:rgb(118, 0, 0);
+    color: rgb(118, 0, 0);
 }
 
 nav {
-    background-image: linear-gradient(#000000d0, #000000d0), url(/resources/iphone2.jpg);
+    background-image: linear-gradient(#000000d0, #000000d0),
+        url(/resources/iphone2.jpg);
     background-size: 200% 100%;
     background-position: 55% 0;
 }
@@ -32,29 +45,48 @@ nav ul {
 }
 
 body {
-    background: linear-gradient(#0e0e0ea8, #0e0e0ea8, #0e0e0ea8, #0e0e0ea8, #000), url(/resources/iphonebg.jpg);
+    background: linear-gradient(
+            #0e0e0ea8,
+            #0e0e0ea8,
+            #0e0e0ea8,
+            #0e0e0ea8,
+            #000
+        ),
+        url(/resources/iphonebg.jpg);
     background-repeat: repeat;
-    font-family: Arial, sans-serif;
-    color:white;
+    font-family: segoe_ui, sans-serif;
+    color: white;
 }
 
 .body-gallery {
-    background: linear-gradient(#6b6b6b00, #69696906, #51515110, #43434338, #000), url(/resources/gallery/road.jpg);
+    background: linear-gradient(
+            #6b6b6b00,
+            #69696906,
+            #51515110,
+            #43434338,
+            #000
+        ),
+        url(/resources/gallery/road.jpg);
     background-repeat: repeat;
-    font-family: Arial, sans-serif;
+    font-family: segoe_ui, sans-serif;
     color: white;
     background-size: 50%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: ordner;
 }
 
 .marquee-slow {
     overflow-x: hidden;
 }
 
-.marquee-slow * {
+.marquee-slow > * {
     position: relative;
     left: 100%;
     animation: marquee linear 10s infinite;
@@ -65,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
 }
 
-.marquee * {
+.marquee > * {
     position: relative;
     left: 100%;
     animation: marquee linear 8s infinite;
@@ -83,23 +115,67 @@ h1, h2, h3, h4, h5, h6 {
 
 .unstyle-btn {
     background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    background: none;
+    text-shadow: none;
+    box-shadow: none;
+    padding: auto;
+    border: none;
 }
 
+.unstyle-btn:hover {
+    box-shadow: none;
+}
+
+/* button {
+    background: rgb(205,213,221);
+    background: linear-gradient(180deg, rgba(205,213,221,1) 0%, rgba(177,190,203,1) 50%, rgba(135,153,171,1) 51%, rgba(182,193,206,1) 81%);
+    color: white;
+    text-shadow: 0px 2px 5px rgba(0,0,0,1);
+    border: 1px solid rgb(74, 92, 106);
+    box-shadow: inset 0px 0px 5px 1px rgba(255,255,255,1);
+    padding: 5px;
+}
+
+button:hover {
+    background: rgb(205,213,221);
+    background: linear-gradient(180deg, rgba(205,213,221,1) 0%, rgba(177,190,203,1) 50%, rgba(135,153,171,1) 51%, rgba(182,193,206,1) 81%), linear-gradient(#000000);
+} */
+
 button {
-    background-image: linear-gradient(rgb(235, 235, 235), rgb(235, 235, 235), rgb(108, 108, 108));
+    background: rgb(83, 83, 83);
+    background: linear-gradient(
+        180deg,
+        rgba(83, 83, 83, 1) 0%,
+        rgba(29, 29, 29, 1) 50%,
+        rgba(0, 0, 0, 1) 51%,
+        rgba(18, 18, 18, 1) 81%
+    );
+    color: white;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+    border: 1px solid rgb(116, 116, 116);
+    box-shadow: inset 0px 0px 2px 1px rgb(188, 188, 188);
+    padding: 5px;
+}
+
+button:hover {
+    box-shadow: inset 0px 0px 4px 1px rgb(188, 188, 188);
+}
+
+button:active {
+    box-shadow: inset 0px 0px 8px 5px rgb(6, 6, 6);
 }
 
 .gallery img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
 }
 
 .caption {
@@ -122,14 +198,12 @@ button {
     text-align: center;
     margin-top: 8px;
     margin-bottom: 2px;
-    text-shadow: 4px 4px 9px rgba(0,0,0,1);
+    text-shadow: 4px 4px 9px rgba(0, 0, 0, 1);
 }
 
 .image-block img {
     display: block;
-    box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.75);
     margin-left: auto;
     margin-right: auto;
 }
@@ -139,7 +213,7 @@ button {
 }
 
 .fall {
-    animation: fall 1s forwards cubic-bezier(.72,0,1,.83);
+    animation: fall 1s forwards cubic-bezier(0.72, 0, 1, 0.83);
 }
 
 @keyframes fall {
@@ -165,3 +239,176 @@ button {
     font-size: 8px;
     margin-top: 1px;
 }
+
+#playpause {
+    background-image: linear-gradient(rgb(213, 213, 213), rgb(143, 143, 143));
+    border: none;
+    box-shadow: none;
+}
+
+#playpause:hover {
+    background-image: linear-gradient(rgb(213, 213, 213), rgb(143, 143, 143));
+    border: none;
+    box-shadow: none;
+    box-shadow: inset 0px 0px 5px 1px rgb(48, 48, 48);
+}
+
+#playpause span {
+    position: relative;
+    bottom: 4px;
+}
+
+/* :root {
+    --track-color: #929292;
+    --thumb-color: #3f3f3f;
+    --thumb-radius: 8px;
+    --thumb-height: 12px;
+    --thumb-width: 12px;
+    --thumb-shadow-size: 1px;
+    --thumb-shadow-blur: 1px;
+    --thumb-shadow-color: #111;
+    --thumb-border-width: 1px;
+    --thumb-border-color: white;
+    --track-width: 100%;
+    --track-height: 7px;
+    --track-shadow-size: 2px;
+    --track-shadow-blur: 2px;
+    --track-shadow-color: #222;
+    --track-border-width: 1px;
+    --track-border-color: rgb(255, 255, 255);
+    --track-radius: 5px;
+    --track-progress-color: rgb(32, 121, 255);
+    --contrast: 5%;
+}
+
+input[type="range"] {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: var(--thumb-height) / 2 0;
+    width: var(--track-width);
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+        width: var(--track-width);
+        height: var(--track-height);
+        cursor: pointer;
+
+        box-shadow: var(--track-shadow-size) var(--track-shadow-size)
+                var(--track-shadow-blur) var(--track-shadow-color),
+            0px 0px var(--track-shadow-size)
+                lighten(var(--track-shadow-color), 5%);
+        background: var(--track-color);
+        border-radius: var(--track-radius);
+        border: var(--track-border-width) solid var(--track-border-color);
+    }
+
+    &::-webkit-slider-thumb {
+        box-shadow: var(--thumb-shadow-size) var(--thumb-shadow-size)
+                var(--thumb-shadow-blur) var(--thumb-shadow-color),
+            0px 0px var(--thumb-shadow-size)
+                lighten(var(--thumb-shadow-color), 5%);
+
+        border: var(--thumb-border-width) solid var(--thumb-border-color);
+        height: var(--thumb-height);
+        width: var(--thumb-width);
+        border-radius: var(--thumb-radius);
+        background: var(--thumb-color);
+        cursor: pointer;
+
+        -webkit-appearance: none;
+        margin-top: ((-var(--track-border-width) * 2 + --track-height) / 2) -
+            (var(--thumb-height) / 2);
+    }
+
+    &:focus::-webkit-slider-runnable-track {
+        background: lighten(var(--track-color), var(--contrast));
+    }
+
+    &::-moz-range-track {
+        width: var(--track-width);
+        height: var(--track-height);
+        cursor: pointer;
+
+        box-shadow: var(--track-shadow-size) var(--track-shadow-size)
+                var(--track-shadow-blur) var(--track-shadow-color),
+            0px 0px var(--track-shadow-size)
+                lighten(var(--track-shadow-color), 5%);
+        background: var(--track-color);
+        border-radius: var(--track-radius);
+        border: var(--track-border-width) solid var(--track-border-color);
+    }
+
+    &::-moz-range-progress {
+        width: var(--track-width);
+        height: var(--track-height);
+        cursor: pointer;
+
+        background-color: var(--track-progress-color); 
+    }
+
+    &::-moz-range-thumb {
+        box-shadow: var(--thumb-shadow-size) var(--thumb-shadow-size)
+                var(--thumb-shadow-blur) var(--thumb-shadow-color),
+            0px 0px var(--thumb-shadow-size)
+                lighten(var(--thumb-shadow-color), 5%);
+
+        border: var(--thumb-border-width) solid var(--thumb-border-color);
+        height: var(--thumb-height);
+        width: var(--thumb-width);
+        border-radius: var(--thumb-radius);
+        background: var(--thumb-color);
+        cursor: pointer;
+    }
+
+    &::-ms-track {
+        width: var(--track-width);
+        height: var(--track-height);
+        cursor: pointer;
+
+        background: transparent;
+        border-color: transparent;
+        border-width: var(--thumb-width) 0;
+        color: transparent;
+    }
+
+    &::-ms-fill-lower {
+        background: darken(var(--track-color), var(--contrast));
+        border: var(--track-border-width) solid var(--track-border-color);
+        border-radius: var(--track-radius) * 2;
+        box-shadow: var(--track-shadow-size) var(--track-shadow-size)
+                var(--track-shadow-blur) var(--track-shadow-color),
+            0px 0px var(--track-shadow-size)
+                lighten(var(--track-shadow-color), 5%);
+    }
+    &::-ms-fill-upper {
+        background: var(--track-color);
+        border: var(--track-border-width) solid var(--track-border-color);
+        border-radius: var(--track-radius) * 2;
+        box-shadow: var(--track-shadow-size) var(--track-shadow-size)
+                var(--track-shadow-blur) var(--track-shadow-color),
+            0px 0px var(--track-shadow-size)
+                lighten(var(--track-shadow-color), 5%);
+    }
+    &::-ms-thumb {
+        box-shadow: var(--thumb-shadow-size) var(--thumb-shadow-size)
+                var(--thumb-shadow-blur) var(--thumb-shadow-color),
+            0px 0px var(--thumb-shadow-size)
+                lighten(var(--thumb-shadow-color), 5%);
+
+        border: var(--thumb-border-width) solid var(--thumb-border-color);
+        height: var(--thumb-height);
+        width: var(--thumb-width);
+        border-radius: var(--thumb-radius);
+        background: var(--thumb-color);
+        cursor: pointer;
+    }
+    &:focus::-ms-fill-lower {
+        background: var(--track-color);
+    }
+    &:focus::-ms-fill-upper {
+        background: lighten(var(--track-color), var(--contrast));
+    }
+} */

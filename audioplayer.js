@@ -7,12 +7,12 @@ function playpause(btn)
     if(audio.paused) 
     {
         audio.play();
-        btn.innerText = "⏸︎";
+        btn.querySelector("span").innerText = "⏸︎";
     }
     else 
     {
         audio.pause();
-        btn.innerText = "⏵︎";
+        btn.querySelector("span").innerText = "⏵︎";
     }
 }
 
@@ -39,6 +39,10 @@ function displayAudioInfo()
 function setProgress() {
     const audio = document.querySelector("#audio_"+playlistCur);
     document.querySelector("#progress").value = audio.currentTime / audio.duration * 100;
+
+    const mins = Math.trunc(audio.currentTime / 60);
+    const secs = Math.trunc(audio.currentTime % 60);
+    document.querySelector("#songprog").innerText = `${mins}:${secs < 10 ? 0 : ''}${secs}`;
 }
 
 setInterval(setProgress, 500);
